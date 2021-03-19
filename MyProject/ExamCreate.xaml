@@ -1,0 +1,117 @@
+﻿<Window x:Class="MyProject.ExamCreate"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyProject"
+        mc:Ignorable="d"
+        Title="יצירת מבחן" Height="470" Width="500">
+    <Grid >
+        <TabControl Background="WhiteSmoke" TabStripPlacement="Top" FlowDirection="RightToLeft">
+            <TabItem Name="tab1" Width="160" Height="35" Header="שאלה חדשה">
+                <StackPanel Orientation="Vertical">
+
+                    <StackPanel Orientation="Horizontal" Height="28">
+                        <Label Content="בחר/י נושא מבחן" Width="120"></Label>
+                        <ComboBox Name="subject_selected" IsSynchronizedWithCurrentItem="True" Height="20">
+                            <ComboBoxItem Name="Math_Question" Content="מטמטיקה"></ComboBoxItem>
+                            <ComboBoxItem Name="English_Questions" Content="אנגלית"></ComboBoxItem>
+                            <ComboBoxItem Name="Bible_Questions" Content="תנך"></ComboBoxItem>
+                            <ComboBoxItem Name="History_Questions" Content="היסטוריה"></ComboBoxItem>
+                            <ComboBoxItem Name="Chemesty_Questions" Content="תכנות"></ComboBoxItem>
+                            <ComboBoxItem Name="Programing_Questions" Content="כימיה"></ComboBoxItem>
+                        </ComboBox>
+                        <Label Content="רמה" Width="50" Margin="25,0,0,0"></Label>
+                        <ComboBox Name="level_selected" Height="20">
+                            <ComboBoxItem Name="level_1" Content="1"></ComboBoxItem>
+                            <ComboBoxItem Name="level_2" Content="2"></ComboBoxItem>
+                            <ComboBoxItem Name="level_3" Content="3"></ComboBoxItem>
+                            <ComboBoxItem Name="level_4" Content="4"></ComboBoxItem>
+                            <ComboBoxItem Name="level_5" Content="5"></ComboBoxItem>
+                            <ComboBoxItem Name="level_6" Content="6"></ComboBoxItem>
+                        </ComboBox>
+                        
+                    </StackPanel>
+
+                    <StackPanel Orientation="Vertical" Height="70" Margin="0,8,0,0">
+                        <Label Content="שאלה"></Label>
+                        <TextBox Name="question" Height="50"></TextBox>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Vertical" Height="50" Margin="0,15,0,0">
+                        <Label Content="תשובה"></Label>
+                        <TextBox Name="offered_answer_1" Height="30"></TextBox>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Vertical" Height="50" Margin="0,15,0,0">
+                        <Label Content="תשובה מוצעת 1"></Label>
+                        <TextBox Name="offered_answer_2"  Height="30"></TextBox>
+                    </StackPanel>
+                    
+                    <StackPanel Orientation="Vertical" Height="50">
+                        <Label Content="תשובה מוצעת 2"></Label>
+                        <TextBox Name="offered_answer_3" Height="30"></TextBox>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Vertical" Height="60">
+                        <Label Content="תשובה מוצעת 3"></Label>
+                        <TextBox Name="offered_answer_4" Height="30"></TextBox>
+                    </StackPanel>
+                    <Button Height="30" Width="50" HorizontalAlignment="Left" Margin="12" Content="אישור" Click="Button_Click"></Button>
+                </StackPanel>
+                
+            </TabItem>
+            <TabItem Name="tab2" Width="160" Height="35" Header="מחיקת שאלה">
+                <StackPanel Orientation="Vertical">
+                    <Label Content="חיפוש מהיר של השאלה"></Label>
+                    <Label Content="בחר/י את הנושא והכנס/י טקסט של השאלה או חלק ממנה"></Label>
+                    <StackPanel Margin="10,10,0,0" Height="25" Orientation="Horizontal">
+                        <ComboBox IsSynchronizedWithCurrentItem="True" IsEditable="True" Name="SubjetToDelete" IsReadOnly="True" Text="נושא" Width="55" HorizontalAlignment="Left">
+                            <ComboBoxItem Name="Question" Content="מטמטיקה"></ComboBoxItem>
+                            <ComboBoxItem Name="Enlish_Question" Content="אנגלית"></ComboBoxItem>
+                            <ComboBoxItem Name="Bible_Question" Content=" תנך"></ComboBoxItem>
+                            <ComboBoxItem Name="History_Question" Content=" היסטוריה"></ComboBoxItem>
+                            <ComboBoxItem Name="Chemesty_Question" Content=" תכנות"></ComboBoxItem>
+                            <ComboBoxItem Name="Programing_Question" Content=" כימיה"></ComboBoxItem>
+                        </ComboBox>
+
+                        <Label Content="טקסט" Width="50" Margin="15,0,0,0"></Label>
+                        <TextBox Name="TexrFind" Width="200"></TextBox>
+                        <Button Width="60" Click="Button_Click_1" Content="הצג" Margin="20,0,0,0"></Button>
+                    </StackPanel>
+
+                    <ListView  x:Name="QuestionTableToDelete" HorizontalAlignment="Left" Height="201" Margin="50,10,0,0" VerticalAlignment="Top" ItemsSource="{Binding selectedItems}"   Width="350" >
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="" Width="30">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <CheckBox x:Name="Chck" Checked="Chck_Checked"  IsChecked="{Binding RelativeSource={RelativeSource AncestorType=ListViewItem},Path=IsSelected}" Width="50" ></CheckBox>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                                <GridViewColumn x:Name="grid1" DisplayMemberBinding="{Binding Question_ID}" Header="מספר שאלה" Width="80"/>
+                                <GridViewColumn DisplayMemberBinding="{Binding Question_Text}" Header="שאלה"  Width="450"/>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                    <Button Click="Button_Click_2" Height="35" Width="200" Content="מחיקת שאלה" Background="Red" Foreground="White" FontSize="15" Margin="0,20,0,0"></Button>
+                </StackPanel>
+            </TabItem>
+            <TabItem Name="tab3" Width="160" Height="35" Header="עדכון שאלה">
+                <StackPanel Orientation="Vertical">
+                    <StackPanel Orientation="Horizontal" Height="70">
+                        <Label Content="אנא הנכס/י את מספר השאלה שברצנך לעדכן" Height="30"></Label>
+                        <TextBox Name="textboxdisplay" Height="20" Width="25"></TextBox>
+                    </StackPanel>
+                    <Button Content="הצג שאלה" Width="150" Click="Button_Click_Display_Update"></Button>
+                    <TextBlock Name="quesdisplay" Background="White" Width="290" Height="50" HorizontalAlignment="Left" Margin="0,50,0,0"></TextBlock>
+                    <Label Content="שנה את השאלה" Margin="0,20,0,0"></Label>
+                    <TextBox Name="textboxchangch" Width="290" Height="30" HorizontalAlignment="Left"></TextBox>
+                    <Button Margin="0,50,0,0" Width="120" Height="30" Content="שנה" Click="Button_Click_Changch"></Button>
+                    <Button Width="50" Height="25" Content="ראשי" Margin="380,20,0,0" Click="Button_Return"></Button>
+                </StackPanel>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>

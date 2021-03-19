@@ -1,0 +1,39 @@
+﻿<Window x:Class="MyProject.Messege"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyProject"
+        mc:Ignorable="d"
+        Title="הודעות" Height="500" Width="520">
+    <Grid>
+        <TabControl>
+            <TabItem Width="250" Height="35" Header="הודעה חדשה">
+                <StackPanel Orientation="Vertical">
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Height="35">
+                        <ComboBox Name="userscombox" IsEditable="True" IsReadOnly="True" Width="50" Height="25" Margin="0,0,42,0"></ComboBox>
+                        <Label Width="35" Height="25" Content=":אל"></Label>
+                    </StackPanel>
+                    <Label Content="הודעה" HorizontalAlignment="Right" Margin="0,35,25,25"></Label>
+                    <TextBox Name="messegetext" Width="330" HorizontalAlignment="Right" Height="75" Margin="0,0,25,25" TextAlignment="Right"></TextBox>
+                    <Button Name="messegesend" Height="75" Width="100" Margin="0 50 0 0" Padding="0 50 0 0" Content="שלח" FontWeight="Bold" Click="messegesend_Click">
+                        <Button.Background>
+                            <ImageBrush ImageSource="pics/mes.png"></ImageBrush>
+                        </Button.Background>
+                    </Button>
+                    <Button Width="70" Height="25" Content=" מסך ראשי" Margin="380,20,0,0" Click="Button_Return"></Button>
+                </StackPanel>
+            </TabItem>
+            <TabItem Width="250" Height="35" Header="הודעות נכנסות">
+                <Grid>
+                    <DataGrid Height="350" Margin="0,50,0,0" Name="MessegesTable"  AutoGenerateColumns="False" Background="Honeydew">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Binding="{Binding Messege_Text}" Header="הודעה" Width="430"/>
+                            <DataGridTextColumn Binding="{Binding Messege_Id}" Header="מס' הודעה" Width="75"/>
+                        </DataGrid.Columns>
+                       </DataGrid>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>

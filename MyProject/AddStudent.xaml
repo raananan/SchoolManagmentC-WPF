@@ -1,0 +1,105 @@
+﻿<Window x:Class="MyProject.AddStudent"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyProject"
+        mc:Ignorable="d"
+        Title="AddStudent" Height="500" Width="525">
+    <Grid Background="White">
+
+        <ScrollViewer HorizontalScrollBarVisibility="Auto" Margin="0,1,0,265">
+            <DataGrid Name="g1" AutoGenerateColumns="False" Height="250" Margin="0,0,0,130">
+
+                <DataGrid.Columns>
+
+                    <DataGridTextColumn Binding="{Binding User_Id}" Header="Id" Width="100"/>
+                    <DataGridTextColumn Binding="{Binding First_Name}" Header="First name"  Width="100"/>
+                    <DataGridTextColumn Binding="{Binding LastName}" Header="Last name"  Width="100"/>
+                    <DataGridTextColumn Binding="{Binding BirthDay}" Header="BirthDay"  Width="100"/>
+                    <DataGridTextColumn Binding="{Binding Group}" Header="Group"  Width="100"/>
+                    <DataGridTextColumn Binding="{Binding IsTeacher}" Header="TeacherName"  Width="100"/>
+                    <DataGridTextColumn Binding="{Binding Gender}" Header="Gender"  Width="100"/>
+                    <DataGridTextColumn Binding="{Binding Email}" Header="Email"  Width="100"/>
+                    <DataGridTextColumn Binding="{Binding Exra_Time}" Header="Extra_Time"  Width="100"/>
+                    <DataGridTextColumn Binding="{Binding Password}" Header="Password"  Width="100"/>
+                    <DataGridTextColumn Binding="{Binding Average}" Header="Average" Width="100"/>
+
+                </DataGrid.Columns>
+
+            </DataGrid>
+        </ScrollViewer>
+
+        <Grid Background="WhiteSmoke" Height="250" Margin="0,190,0,0">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Right">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBox Width="50" Height="20" Name="email"></TextBox>
+                        <Label Content="אימייל" ></Label>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <ComboBox Width="50" Height="20" Name="gender" FontSize="11" >
+                            <ComboBoxItem Content="זכר"/>
+                            <ComboBoxItem Content="נקבה" />
+                        </ComboBox>
+                        <Label Content="מין"></Label>
+
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <ComboBox Width="50" Height="20" Name="extratime" >
+                            <ComboBoxItem Content="0" />
+                            <ComboBoxItem Content="1" />
+                        </ComboBox>
+                        <Label Content="תוספת זמן"></Label>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBox Width="50" Height="20" Name="average"></TextBox>
+                        <Label Content="ממוצע" ></Label>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBox Width="50" Height="20" Name="teachername"></TextBox>
+                        <Label Content="שם המורה" ></Label>
+                    </StackPanel>
+
+                </StackPanel>
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Right">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBox Width="50" Height="20" Name="userid"></TextBox>
+                        <Label Content="id" ></Label>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBox Width="50" Height="20" Name="firstname"></TextBox>
+                        <Label Content="שם פרטי" ></Label>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBox Width="50" Height="20" Name="lastname"></TextBox>
+                        <Label Content=" שם משפחה" ></Label>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <DatePicker Name="birthday" Width="50" Height="20" FontSize="6"></DatePicker>
+                        <Label Content="תאריך לידה" ></Label>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBox Width="50" Height="20" Name="gruop"></TextBox>
+                        <Label Content="קבוצה" ></Label>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBox Width="50" Height="20" Name="password"></TextBox>
+                        <Label Content="סיסמא" ></Label>
+                    </StackPanel>
+
+
+                </StackPanel>
+
+            </StackPanel>
+            <Button Height="30" Width="150" Content="הוסף משתמש" Margin="0,0,350,120" Click="Button_Click"></Button>
+            <StackPanel Orientation="Vertical" Height="50" Width="130" Margin="0,90,400,0">
+                <Label Content="מחק תלמיד לפי תז"></Label>
+                <StackPanel Orientation="Horizontal">
+                    <TextBox Width="20" Name="rownum"></TextBox>
+                    <Button Width="80" Content="מחק " Click="Button_Click_1"></Button>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>

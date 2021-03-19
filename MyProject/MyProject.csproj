@@ -34,8 +34,16 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Ahmadhania-Spherical-Down.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup />
   <ItemGroup>
+    <Reference Include="PresentationFramework.Aero2" />
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -55,6 +63,65 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Admin.xaml.cs">
+      <DependentUpon>Admin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ExamChoose.xaml.cs">
+      <DependentUpon>ExamChoose.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ExamCreate.xaml.cs">
+      <DependentUpon>ExamCreate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Grades.xaml.cs">
+      <DependentUpon>Grades.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.xaml.cs">
+      <DependentUpon>LoginForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Messege.xaml.cs">
+      <DependentUpon>Messege.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PermissionUsers.xaml.cs">
+      <DependentUpon>PermissionUsers.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="questionnaire.xaml.cs">
+      <DependentUpon>questionnaire.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Scedual.xaml.cs">
+      <DependentUpon>Scedual.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="StudentTeacherControl.xaml.cs">
+      <DependentUpon>StudentTeacherControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="StudentWindow.xaml.cs">
+      <DependentUpon>StudentWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TeachersAdminControl.xaml.cs">
+      <DependentUpon>TeachersAdminControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TeacherWindow.xaml.cs">
+      <DependentUpon>TeacherWindow.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Admin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ExamChoose.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ExamCreate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Grades.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LoginForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -67,6 +134,38 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Messege.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PermissionUsers.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="questionnaire.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Scedual.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StudentTeacherControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StudentWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TeachersAdminControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TeacherWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -93,7 +192,31 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pics\bible.jpg" />
+    <Resource Include="pics\board2.jpg" />
+    <Resource Include="pics\borad.jpg" />
+    <Resource Include="pics\english.jpg" />
+    <Resource Include="pics\header.tif" />
+    <Resource Include="pics\history.jpg" />
+    <Resource Include="pics\images.png" />
+    <Resource Include="pics\math.png" />
+    <Resource Include="pics\programing.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pics\Sketch001.tif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pics\mes.png" />
+    <Resource Include="Hopstarter-Soft-Scraps-Button-Download.ico" />
+    <Resource Include="Ahmadhania-Spherical-Down.ico" />
+    <Content Include="pics\icon.jfif" />
+    <Content Include="pics\messege.jfif" />
+    <Content Include="pics\newmessege.jfif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

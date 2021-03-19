@@ -1,0 +1,50 @@
+﻿<Window x:Class="MyProject.ExamChoose"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyProject"
+        mc:Ignorable="d"
+        Title="בחירת נושא שאלון" Height="460" Width="400">
+    <Grid>
+        <StackPanel Orientation="Vertical" Margin="0,15,0,0">
+            <Label Name="header_exam_Choose" Content="בחר נושא שאלון" FontSize="13" FontWeight="Bold" HorizontalAlignment="Center"></Label>
+            <StackPanel Orientation="Horizontal" Margin="8" Height="110">
+                <Button Name="btn_math" Content="מטמתיקה" FontSize="30" FontWeight="Bold" Foreground="Red" Margin="15,0,-15,0"  Width="150" Click="btn_math_Click">
+                    <Button.Background>
+                        <ImageBrush ImageSource="pics/math.png"></ImageBrush>
+                    </Button.Background>
+                </Button>
+                <Button Name="btn_english" Content="אנגלית" FontSize="30" FontWeight="Bold" Foreground="GreenYellow" Margin="60,0,0,0" Width="150" Click="btn_english_Click">
+                    <Button.Background>
+                        <ImageBrush ImageSource="pics/english.jpg"></ImageBrush>
+                    </Button.Background>
+                </Button>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="8" Height="110">
+                <Button Name="btn_history" Content="היסטוריה" FontSize="30" FontWeight="Bold" Foreground="White" Margin="15,0,-15,0"  Width="150" Click="btn_history_Click">
+                    <Button.Background>
+                        <ImageBrush ImageSource="pics/history.jpg"></ImageBrush>
+                    </Button.Background>
+                </Button>
+                <Button Name="btn_bible" Content="תנ''ך" FontSize="30" FontWeight="Bold" Foreground="Black" HorizontalContentAlignment="Center" Margin="60,0,0,0" Width="150" Click="btn_bible_Click">
+                    <Button.Background>
+                        <ImageBrush ImageSource="pics/bible.jpg"></ImageBrush>
+                    </Button.Background>
+                </Button>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="8" Height="110">
+                <Button Name="btn_chymesty" Content="כימיה" FontSize="30" FontWeight="Bold" Foreground="Aqua" Margin="15,0,-15,0"  Width="150" Click="btn_chymesty_Click">
+                    <Button.Background>
+                        <ImageBrush ImageSource="pics/images.png"></ImageBrush>
+                    </Button.Background>
+                </Button>
+                <Button Name="btn_programmer" Content="תכנות" FontSize="30" FontWeight="Bold" Foreground="Yellow" Margin="60,0,0,0" Width="150" Click="btn_programmer_Click">
+                    <Button.Background>
+                        <ImageBrush ImageSource="pics/programing.jpg"></ImageBrush>
+                    </Button.Background>
+                </Button>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -10,31 +10,25 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System.Data.SqlClient;
-using System.IO;
-using System.Net;
-using System.Text.RegularExpressions;
-using System.Configuration;
-using System.Collections.Specialized;
 
 namespace MyProject
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Scedual.xaml
     /// </summary>
-    public partial class MainWindow : Window
-    {      
-        public MainWindow()
+    public partial class Scedual : Window
+    {
+        public Scedual()
+        {
+            InitializeComponent();
+        }
+
+        private void eventCommit_Click(object sender, RoutedEventArgs e)
         {
             LoginForm l = new LoginForm();
-            this.Close();
             l.Show();
-            
+            this.Close();
         }
     }
-    
-    }
-
-
+}

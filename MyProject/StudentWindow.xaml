@@ -1,0 +1,40 @@
+﻿<Window x:Class="MyProject.StudentWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyProject"
+        mc:Ignorable="d"
+        Title="תפריט ראשי" Height="450" Width="600">
+
+    <Window.Background>
+        <ImageBrush ImageSource="pics/board2.jpg"></ImageBrush>
+    </Window.Background>
+    <Grid>
+
+        <StackPanel HorizontalAlignment="Center"  Height="400" Width="600" Orientation="Vertical">
+            <Label HorizontalContentAlignment="Center" Name="Header" Content="Header" Width="120" Margin="20" ></Label>
+            <StackPanel Width="56" Height="24" HorizontalAlignment="Right" Margin="0,-60,30,0" Orientation="Horizontal" MouseEnter="StackPanel_MouseEnter">
+                <ComboBox Name="info_combox" Width="0" HorizontalContentAlignment="Right">
+                    <ComboBoxItem Content="ת.ז" Name="combox_info_id"></ComboBoxItem>
+                    <ComboBoxItem Content="שם" Name="combox_info_name"></ComboBoxItem>
+                    <ComboBoxItem Content="כיתה" Name="combox_info_class"></ComboBoxItem>
+                    <ComboBoxItem Content="רמה " Name="combox_info_level"></ComboBoxItem>
+                </ComboBox>
+                <Label HorizontalAlignment="Right" Content="מידע"  Height="27"></Label>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Height="332" Margin="26,0,27,0">
+                <StackPanel Orientation="Vertical" Width="278">
+                    <Label Name="messeges" FontStyle="Oblique" FontWeight="Thin" Opacity="0.7"  Width="200" Height="70" Content="הודעות" HorizontalAlignment="Right" Foreground="White" FontSize="40" Background="Transparent" MouseEnter="Label_MouseEnter" MouseLeave="messeges_MouseLeave" MouseDoubleClick="messeges_MouseDoubleClick"/>
+                    <Label Name="events" FontStyle="Oblique" FontWeight="Thin" Opacity="0.7"  Width="200" Height="70" Content="אירועים" HorizontalAlignment="Right" Foreground="White" FontSize="40" Background="Transparent" MouseEnter="events_MouseEnter" MouseLeave="events_MouseLeave" MouseDoubleClick="events_MouseDoubleClick"/>
+                </StackPanel>
+                <StackPanel Orientation="Vertical" Width="268">
+                    <Label Name="exams"  FontStyle="Oblique" FontWeight="Thin" Opacity="0.7"  Width="200" Height="70" Content="מבחנים" HorizontalAlignment="Right" Foreground="White" FontSize="40" Background="Transparent" MouseEnter="exams_MouseEnter" MouseLeave="exams_MouseLeave" MouseDoubleClick="exams_MouseDoubleClick"/>
+                    <Label Name="grades" FontStyle="Oblique" FontWeight="Thin" Opacity="0.7"  Width="200" Height="70" Content="ציונים" HorizontalAlignment="Right" Foreground="White" FontSize="40" Background="Transparent" MouseEnter="grades_MouseEnter" MouseLeave="grades_MouseLeave" MouseDoubleClick="grades_MouseDoubleClick"/>
+
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+
+    </Grid>
+</Window>

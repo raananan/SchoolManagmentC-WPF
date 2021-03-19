@@ -1,0 +1,67 @@
+﻿<Window x:Class="MyProject.Admin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyProject"
+        mc:Ignorable="d"
+        Title="מסך כניסה" Height="550" Width="650">
+    <Grid Background="Lavender">
+        <StackPanel Orientation="Vertical">
+            <Label Content=" מסך כניסה" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold"/>
+            <Canvas  Height="50" Margin="0,0,0,450" Background="gray" >
+
+                <Label Canvas.Left="0" FontStyle="Italic" FontSize="25" FontWeight="Bold" Foreground="WhiteSmoke" Content="GetBtter2019"/>
+                <Label  Canvas.Right="0" Foreground="WhiteSmoke" Content="Admin ברוך הבא"/>
+                <StackPanel  Name="st"  Height="20" Width="70" Background="#FF09F729" Margin="568,25,0,0" MouseEnter="StackPanel_MouseEnter" MouseLeave="st_MouseLeave"  Opacity="0.2">
+                    <TextBlock Height="20" Width="46" HorizontalAlignment="Right" Text="ניהול" ></TextBlock>
+                    <ComboBox x:Name="combox1"  Height="15" Width="0" Text="ניהול" Margin="-60,-13,0,0" RenderTransformOrigin="-1.85,0.2">
+                        <ComboBoxItem HorizontalContentAlignment="Right" Width="63" Selected="ComboBoxItem_Selected">מרצים</ComboBoxItem>
+                        <ComboBoxItem HorizontalContentAlignment="Right" Width="63">כיתות</ComboBoxItem>
+                        <ComboBoxItem HorizontalContentAlignment="Right" Width="63" Selected="permissiontablecombox">הרשאות</ComboBoxItem>
+                        
+                    </ComboBox>
+                </StackPanel>
+                <StackPanel  Name="st2"  Height="20" Width="70" Background="#FF09F729" Margin="490,25,0,0" MouseEnter="st2_MouseEnter" MouseLeave="st2_MouseLeave"  Opacity="0.2">
+                    <TextBlock Height="20" Width="54" HorizontalAlignment="Right" Text="אירועים" ></TextBlock>
+                    <ComboBox x:Name="combox2"  Height="15" Width="0" Text="ניהול" Margin="-60,-13,0,0" >
+                        
+                        <ComboBoxItem HorizontalContentAlignment="Right" Width="63" Selected="ComboBoxItem_Selected_1">יומן</ComboBoxItem>
+                        <ComboBoxItem HorizontalContentAlignment="Right" Width="63">טקסים</ComboBoxItem>
+                        <ComboBoxItem HorizontalContentAlignment="Right" Width="63">מבחנים</ComboBoxItem>
+                    </ComboBox>
+                </StackPanel>
+                <StackPanel  Name="st3"  Height="20" Width="70" Background="#FF09F729" Margin="412,25,0,0" MouseEnter="st3_MouseEnter" MouseLeave="st3_MouseLeave"  Opacity="0.2">
+                    
+                        <TextBlock Height="20" Width="50" HorizontalAlignment="Right" Text="נהלים" ></TextBlock>
+                        <ComboBox x:Name="combox3"  Height="15" Width="0" Text="ניהול" Margin="-60,-13,0,0" RenderTransformOrigin="-1.85,0.2">
+                        <ComboBoxItem HorizontalContentAlignment="Right" Width="63" >מרצים</ComboBoxItem>
+                        <ComboBoxItem HorizontalContentAlignment="Right" Width="63">כיתות</ComboBoxItem>
+                        <ComboBoxItem HorizontalContentAlignment="Right" Width="63">מכללה</ComboBoxItem>
+                    </ComboBox>
+                    
+                </StackPanel>
+            </Canvas>
+
+        </StackPanel>
+        <TextBlock Height="200" Width="600" TextWrapping="Wrap" TextAlignment="Right">                            
+                  .הינה פלטפורמה אשר יודעת ליצור שאלונים מותאמים אישית על פי רמת  הקושי של כל תלמיד GetBetter <LineBreak></LineBreak> 
+ שאלוני תרגול נוצרים בהתאם לחולשותיו של התלמיד שנקבעות על פי
+
+.שאלונים קודמים שענה עליהם<LineBreak></LineBreak> 
+המערכת תלמד את יכולותיו של התלמיד ותבנה באופן אוטומטי שאלוני תרגול חדשים באופן
+.שתשבץ יותר שאלות בנושאים שבהם התלמיד מתקשה<LineBreak></LineBreak> 
+            על ידי כך יוכל התלמיד לחדד את
+.יכולותיו באותם הנושאים בהם הוא מתקשה<LineBreak></LineBreak> 
+ תדע לחשב סטטיסטיקות אישיות של כל תמיד על פי ביצועיו בכל המקצועות
+ולהציג אותן בפני המורים.
+
+
+.היא ללמוד את מאפייניו המקצועיים של התלמיד ולשפר את יכולותיו.<LineBreak></LineBreak> 
+        Get Better    מטרת מערכת  <LineBreak></LineBreak> 
+היא ליצור שיטה שמאפשרת לתלמיד לשפר את הישגיו הלימודיים.
+בנוסף, תהיה אפשרות למורה לקבל אינדיקציה באילו נושאים התלמידים מתקשים, ובעקבות כך,
+לדעת על מה לתת דגש, או כיצד לשפר את עצמו.</TextBlock>
+
+    </Grid>
+</Window>
